@@ -1,0 +1,19 @@
+int main() {
+    cout << "=== Production Worker 1 ===" << endl;
+    ProductionWorker pw1("Alice Smith", "001", "2021-04-10", 1, 25.50);
+    pw1.printProductionWorker();
+
+    cout << "\n=== Production Worker 2 ===" << endl;
+    ProductionWorker pw2("Bob Johnson", "002", "2020-02-15", 2, 27.75);
+    pw2.printProductionWorker();
+
+    cout << "\n=== Shift Supervisor ===" << endl;
+    ShiftSupervisor ss("Charlie Brown", "003", "2019-11-01", 60000, 5000);
+    ss.printShiftSupervisor();
+
+    cout << "\n=== Team Leader ===" << endl;
+    TeamLeader tl("Dana Lee", "004", "2022-05-20", 1, 30.00, 1200.00, 40, 36);
+    tl.printTeamLeader();
+
+    return 0;
+}
