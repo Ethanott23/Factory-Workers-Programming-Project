@@ -1,0 +1,28 @@
+class ProductionWorker : public Employee {
+private:
+    int shift; // 1 = day, 2 = night
+    double hourlyPayRate;
+
+public:
+    // Default constructor
+    ProductionWorker() : Employee(), shift(1), hourlyPayRate(0.0) {}
+
+    // Parameterized constructor using initializer list
+    ProductionWorker(string n, string num, string date, int s, double rate)
+        : Employee(n, num, date), shift(s), hourlyPayRate(rate) {}
+
+    // Accessors
+    int getShift() const { return shift; }
+    double getHourlyPayRate() const { return hourlyPayRate; }
+
+    // Mutators
+    void setShift(int s) { shift = s; }
+    void setHourlyPayRate(double rate) { hourlyPayRate = rate; }
+
+    // Print function
+    void printProductionWorker() const {
+        printEmployee();
+        cout << "Shift: " << (shift == 1 ? "Day" : "Night") << "\n"
+             << "Hourly Pay Rate: $" << hourlyPayRate << endl;
+    }
+};
