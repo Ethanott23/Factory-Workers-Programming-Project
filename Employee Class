@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Employee {
+protected:
+    string name;
+    string employeeNumber;
+    string hireDate;
+
+public:
+    // Default constructor
+    Employee() : name(""), employeeNumber(""), hireDate("") {}
+
+    // Parameterized constructor
+    Employee(string n, string num, string date) : name(n), employeeNumber(num), hireDate(date) {}
+
+    // Accessors (getters)
+    string getName() const { return name; }
+    string getEmployeeNumber() const { return employeeNumber; }
+    string getHireDate() const { return hireDate; }
+
+    // Mutators (setters)
+    void setName(string n) { name = n; }
+    void setEmployeeNumber(string num) { employeeNumber = num; }
+    void setHireDate(string date) { hireDate = date; }
+
+    // Print function
+    void printEmployee() const {
+        cout << "Name: " << name << "\n"
+             << "Employee Number: " << employeeNumber << "\n"
+             << "Hire Date: " << hireDate << endl;
+    }
+};
